@@ -4,7 +4,6 @@ import com.api.vehicules.model.Message;
 import com.api.vehicules.model.Token;
 import com.api.vehicules.repository.MessageRepository;
 import com.api.vehicules.repository.Token_repository;
-import com.auth0.jwt.interfaces.Claim;
 import io.jsonwebtoken.Claims;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
