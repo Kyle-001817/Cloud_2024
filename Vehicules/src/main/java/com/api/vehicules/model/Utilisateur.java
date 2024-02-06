@@ -35,6 +35,10 @@ public class Utilisateur {
         this.email = email;
         this.mdp = mdp;
     }
+    public Utilisateur(String email,String mdp){
+        this.email = email;
+        this.mdp = mdp;
+    }
 
     public int getId_utilisateur() {
         return id_utilisateur;

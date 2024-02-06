@@ -1,6 +1,3 @@
-create database vehicule;
-\c vehicule;
-
 create table utilisateur (
     id_utilisateur serial primary key,
     nom_utilisateur varchar(100),

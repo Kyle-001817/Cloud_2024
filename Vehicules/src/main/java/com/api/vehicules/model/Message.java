@@ -1,12 +1,8 @@
 package com.api.vehicules.model;
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-
-// @Entity
 @Document(collection = "messagerie")
 public class Message {
     @Id
