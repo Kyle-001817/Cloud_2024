@@ -1,8 +1,6 @@
 package com.api.vehicules.controller;
 
-import com.api.vehicules.model.Interaction;
 import com.api.vehicules.model.Marque;
-import com.api.vehicules.model.Voiture;
 import com.api.vehicules.service.Marque_service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

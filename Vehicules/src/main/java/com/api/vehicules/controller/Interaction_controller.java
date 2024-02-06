@@ -1,6 +1,5 @@
 package com.api.vehicules.controller;
 
-import com.api.vehicules.model.Annonce;
 import com.api.vehicules.model.Interaction;
 import com.api.vehicules.service.Interaction_service;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,8 +1,6 @@
 package com.api.vehicules.controller;
 
-import com.api.vehicules.model.Annonce;
 import com.api.vehicules.model.Etat;
-import com.api.vehicules.service.Annonce_service;
 import com.api.vehicules.service.Etat_service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
