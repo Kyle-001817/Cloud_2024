@@ -20,6 +20,9 @@ create table categorie (
     id_categorie serial primary key,
     nom_categorie varchar(50)
 );
+insert into categorie(nom_categorie) values('Voiture de sport');
+insert into categorie(nom_categorie) values('Poids lourd');
+insert into categorie(nom_categorie) values('Voiture legere');
 
 create table marque (
     id_marque serial primary key,
