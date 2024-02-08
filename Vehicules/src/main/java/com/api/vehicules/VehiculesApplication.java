@@ -10,7 +10,18 @@ import org.springframework.web.filter.CorsFilter;
 @SpringBootApplication
 public class VehiculesApplication {
 
+    @Bean
+    CorsFilter corsFilter(){
+        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+        CorsConfiguration config = new CorsConfiguration();
 
+        // Configure allowed origins,methods,headers,etc
+        config.addAllowedOrigin("*");
+        config.addAllowedMethod("*");
+        config.addAllowedHeader("*");
+        source.registerCorsConfiguration("/**",config);
+        return new CorsFilter(source);
+    }
     public static void main(String[] args) {
         SpringApplication.run(VehiculesApplication.class, args);
     }
