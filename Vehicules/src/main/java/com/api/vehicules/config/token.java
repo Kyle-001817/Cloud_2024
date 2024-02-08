@@ -1,5 +1,6 @@
 package com.api.vehicules.config;
 
+import com.api.vehicules.model.Admin;
 import com.api.vehicules.model.Utilisateur;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
@@ -25,6 +26,19 @@ public class token {
 
         String token = Jwts.builder()
                 .setSubject(utilisateur.getEmail())
+                .setIssuedAt(currentDate)
+                .setExpiration(new Date(currentDate.getTime() + dayToMs(1)))
+                .signWith(key)
+                .compact();
+
+        return token;
+    }
+    public static String generateTokenAdmin(Admin admin) {
+        System.out.println(admin.getEmail());
+        Date currentDate = new Date();
+
+        String token = Jwts.builder()
+                .setSubject(admin.getEmail())
                 .setIssuedAt(currentDate)
                 .setExpiration(new Date(currentDate.getTime() + dayToMs(1)))
                 .signWith(key)

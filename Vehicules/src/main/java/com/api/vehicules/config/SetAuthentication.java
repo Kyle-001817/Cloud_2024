@@ -1,5 +1,6 @@
 package com.api.vehicules.config;
 
+import com.api.vehicules.service.CustomAdminService;
 import com.api.vehicules.service.CustomUtilisateurService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
@@ -11,6 +12,7 @@ import org.springframework.security.authentication.AuthenticationCredentialsNotF
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.util.StringUtils;
 import org.springframework.web.filter.OncePerRequestFilter;
 
@@ -22,6 +24,9 @@ public class SetAuthentication extends OncePerRequestFilter {
     private token jwt;
     @Autowired
     private CustomUtilisateurService utilisateurService;
+    @Autowired
+    private CustomAdminService adminService;
+
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
@@ -32,9 +37,12 @@ public class SetAuthentication extends OncePerRequestFilter {
             try {
                 jwt.validateToken(token);
                 String usename = jwt.getUsername(token);
-                System.out.println(usename);
-                UserDetails userDetails = utilisateurService.loadUserByUsername(usename);
-
+                UserDetails userDetails;
+                try{
+                    userDetails = utilisateurService.loadUserByUsername(usename);
+                }catch (UsernameNotFoundException unf) {
+                    userDetails = adminService.loadUserByUsername(usename);
+                }
                 UsernamePasswordAuthenticationToken
                         authToken = new UsernamePasswordAuthenticationToken(
                         userDetails, null, userDetails.getAuthorities()
