@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/ville")
+@RequestMapping("/authentication")
 public class Ville_Controller {
     @Autowired
     Ville_service ville_service;
