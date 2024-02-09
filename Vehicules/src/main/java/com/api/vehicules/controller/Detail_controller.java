@@ -44,7 +44,7 @@ public class Detail_controller {
         return detail_service.getDetailby(id_annonce);
     }
 
-    @GetMapping("/detail_parvoiture/id_voiture")
+    @GetMapping("/detail_parvoiture/{id_voiture}")
     public Optional<Detail> getdetailvoiture(int id_voiture) {
         return detail_service.getDetailbyIdVoiture(voiture_service.getVoitureby(id_voiture).get());
     }
