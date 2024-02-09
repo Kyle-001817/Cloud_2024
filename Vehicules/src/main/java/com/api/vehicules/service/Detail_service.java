@@ -34,6 +34,10 @@ public class Detail_service {
         return detail_repository.findById(id);
     }
 
+    public Optional<Detail> getDetailbyIdVoiture(Voiture voiture){
+        return detail_repository.findById(voiture.getId_detail());
+    }
+
     public Optional<Detail> getDetailAnnonce(int id_annonce){
         Optional<Annonce> annonce = annonces.getAnnonceById(id_annonce);
         Optional<Voiture> v = voiture_service.getVoitureby(annonce.get().getId_voiture());
