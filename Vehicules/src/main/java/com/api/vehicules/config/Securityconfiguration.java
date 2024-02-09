@@ -36,8 +36,8 @@ public class Securityconfiguration {
                         .anyRequest().authenticated();
                 })
                 .httpBasic(Customizer.withDefaults());
-        http.addFilterAfter(jwtInterceptor(), UsernamePasswordAuthenticationFilter.class);
-
+        http
+                .addFilterBefore(jwtInterceptor(), UsernamePasswordAuthenticationFilter.class);
         return http.build();
     }
 
@@ -51,9 +51,9 @@ public class Securityconfiguration {
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
-        configuration.setAllowedOrigins(List.of("http://*"));
-        configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE","OPTIONS"));
-        configuration.setAllowedHeaders(Arrays.asList("Origin","Accept","Authorization", "Content-type", "x-auth-token"));
+        configuration.setAllowedOrigins(List.of("*"));
+        configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE"));
+        configuration.setAllowedHeaders(Arrays.asList("authorization", "content-type", "x-auth-token"));
 
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", configuration);

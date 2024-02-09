@@ -18,7 +18,8 @@ public class Marque_controller {
     Marque_service marque_service;
 
     @GetMapping("all_marque")
-    public List<Marque> getListMarque(){
+    public List<Marque> getListMarque()
+    {
         return marque_service.getAllMarque();
     }
 

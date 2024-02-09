@@ -84,12 +84,6 @@ create table interaction (
     id_utilisateur int references utilisateur(id_utilisateur),
     favoris int
 );
-INSERT INTO annonce(id_utilisateur, id_voiture, date_annonce, accepte_annonce)
-VALUES (1, 7, '2023-01-20', 1);
-
-
-
-
 create table ville
 (
     id_ville serial primary key,
