@@ -102,39 +102,3 @@ INSERT INTO marque(nom_marque) VALUES('Mazda');
 INSERT INTO marque(nom_marque) VALUES('Ford');
 INSERT INTO marque(nom_marque) VALUES('Kia');
 INSERT INTO marque(nom_marque) VALUES('Jeep');
-
--- INSERT INTO model(id_marque,nom,annee) VALUES('MARQUE1','X6',2006);
--- INSERT INTO model(id_marque,nom,annee) VALUES('MARQUE1','X1',2004);
--- INSERT INTO model(id_marque,nom,annee) VALUES('MARQUE1','X2',2003);
--- INSERT INTO model(id_marque,nom,annee) VALUES('MARQUE1','X3',2002);
--- INSERT INTO model(id_marque,nom,annee) VALUES('MARQUE1','M1',2012);
--- INSERT INTO model(id_marque,nom,annee) VALUES('MARQUE2','Yaris',2020);
--- INSERT INTO model(id_marque,nom,annee) VALUES('MARQUE2','Hilux',2019);
--- INSERT INTO model(id_marque,nom,annee) VALUES('MARQUE2','LC300',2023);
--- INSERT INTO model(id_marque,nom,annee) VALUES('MARQUE3','Q5',2000);
--- INSERT INTO model(id_marque,nom,annee) VALUES('MARQUE3','RS7',2003);
--- INSERT INTO model(id_marque,nom,annee) VALUES('MARQUE3','M1',2021);
--- INSERT INTO model(id_marque,nom,annee) VALUES('MARQUE4','MayBach',2004);
--- INSERT INTO model(id_marque,nom,annee) VALUES('MARQUE4','Sprinter',1999);
--- INSERT INTO model(id_marque,nom,annee) VALUES('MARQUE4','Actros',2000);
--- INSERT INTO model(id_marque,nom,annee) VALUES('MARQUE5','BT50',2004);
--- INSERT INTO model(id_marque,nom,annee) VALUES('MARQUE5','Cx3',2001);
--- INSERT INTO model(id_marque,nom,annee) VALUES('MARQUE5','Cx5',2003);
--- INSERT INTO model(id_marque,nom,annee) VALUES('MARQUE5','RX5',2001);
--- INSERT INTO model(id_marque,nom,annee) VALUES('MARQUE6','Ranger',2010);
--- INSERT INTO model(id_marque,nom,annee) VALUES('MARQUE6','GT50',2002);
--- INSERT INTO model(id_marque,nom,annee) VALUES('MARQUE6','Mustang',2008);
--- INSERT INTO model(id_marque,nom,annee) VALUES('MARQUE7','Pride Phase3',2004);
--- INSERT INTO model(id_marque,nom,annee) VALUES('MARQUE7','Sorento',2009);
--- INSERT INTO model(id_marque,nom,annee) VALUES('MARQUE7','Bongo',2010);
--- INSERT INTO model(id_marque,nom,annee) VALUES('MARQUE8','Wrangler',2001);
--- INSERT INTO model(id_marque,nom,annee) VALUES('MARQUE8','Grand Cherokee',2009);
-
--- {
---     "nom_utilisateur": "Landria",
---     "prenom_utilisateur": "Liantsoa",
---     "ville": "Antananarivo",
---     "contact": "+261 34 00 001 01",
---     "mail": "liantsa@gmail.com",
---     "mdp": "liantsoa"
--- }
