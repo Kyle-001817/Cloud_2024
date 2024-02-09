@@ -18,8 +18,7 @@ public class Annonce_controller {
     Annonce_service annonce_service;
 
     @GetMapping("all_annonce")
-    public List<Annonce> getListAnnonce() {
-        System.out.println("dksjfsZAVATRA");
+    public List<Annonce> getListAnnonce(){
         return annonce_service.getAllAnnonce();
     }
     
